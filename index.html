@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aden Auto Electrician & AC Works | Riyadh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.9)), 
+                        url('https://images.unsplash.com/photo-1609521263047-f8f205293f24?q=80&w=2070');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .service-card {
+      transition: all 0.4s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+    }
+
+    .whatsapp-float {
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+    }
+
+    .mobile-menu {
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+    
+    .mobile-menu.active {
+      transform: translateY(0);
+    }
+
+    .workshop-img {
+      transition: transform 0.4s ease;
+    }
+    
+    .workshop-img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+  <!-- Sticky Header -->
+  <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-car-battery text-white text-xl"></i>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold tracking-tighter">Aden Auto</h1>
+          <p class="text-[10px] text-gray-400 -mt-1">ورشة عدن لكهرباء وتكييف السيارات</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-base font-medium">
+        <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
+        <a href="#team" class="hover:text-red-500 transition-colors">Team</a>
+        <a href="#location" class="hover:text-red-500 transition-colors">Location</a>
+      </nav>
+
+      <a href="tel:+966539034412" 
+         class="bg-red-600 hover:bg-red-700 px-5 py-2.5 rounded-2xl font-semibold flex items-center gap-2 text-sm md:text-base transition-all">
+        <i class="fa-solid fa-phone"></i>
+        <span class="hidden sm:inline">Call Now</span>
+      </a>
+
+      <button id="menu-btn" class="md:hidden text-3xl p-2">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-gray-900 z-50 pt-20 px-6 hidden md:hidden">
+      <div class="flex flex-col gap-8 text-2xl font-medium">
+        <a href="#services" class="mobile-link">Our Services</a>
+        <a href="#team" class="mobile-link">Our Team</a>
+        <a href="#location" class="mobile-link">Location & Contact</a>
+        
+        <div class="pt-8 border-t border-gray-700">
+          <a href="tel:+966539034412" class="flex items-center gap-4 text-red-500 text-xl">
+            <i class="fa-solid fa-phone text-3xl"></i>
+            <div>
+              <p class="font-semibold">Call Us</p>
+              <p class="text-lg">+966 539 034 412</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button id="close-menu" class="absolute top-6 right-6 text-4xl text-gray-400">✕</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex items-center relative">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+        Expert Car Electrical<br>& AC Repair in Riyadh
+      </h1>
+      <h2 class="text-3xl md:text-5xl font-bold text-red-500 mb-6">
+        كهربائي سيارات وتكييف محترف
+      </h2>
+      
+      <p class="text-lg md:text-xl text-gray-300 max-w-lg mx-auto mb-10">
+        Fast diagnostics • Professional service • Reliable results
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+966539034412" 
+           class="bg-red-600 hover:bg-red-700 transition-all px-8 py-4 rounded-2xl text-lg font-semibold">
+          📞 Call Now
+        </a>
+        <a href="#services" 
+           class="border-2 border-white hover:bg-white hover:text-black transition-all px-8 py-4 rounded-2xl text-lg font-semibold">
+          Our Services
+        </a>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/966539034412" target="_blank"
+       class="whatsapp-float fixed bottom-6 right-6 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50">
+      <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+    </a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 md:py-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-2">Our Services</h2>
+        <p class="text-red-500 text-2xl">خدماتنا</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="service-card bg-gray-800 rounded-3xl p-8 text-center">
+          <div class="mx-auto w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-snowflake text-red-500 text-4xl"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-1">AC Repair</h3>
+          <p class="text-gray-400 text-sm">Repair & Freon Recharge</p>
+        </div>
+
+        <div class="service-card bg-gray-800 rounded-3xl p-8 text-center">
+          <div class="mx-auto w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-microchip text-red-500 text-4xl"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-1">Diagnostics</h3>
+          <p class="text-gray-400 text-sm">Computer & ECU Check</p>
+        </div>
+
+        <div class="service-card bg-gray-800 rounded-3xl p-8 text-center">
+          <div class="mx-auto w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-bolt text-red-500 text-4xl"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-1">Wiring</h3>
+          <p class="text-gray-400 text-sm">Electrical System Repair</p>
+        </div>
+
+        <div class="service-card bg-gray-800 rounded-3xl p-8 text-center">
+          <div class="mx-auto w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fa-solid fa-car-battery text-red-500 text-4xl"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-1">Battery & Starter</h3>
+          <p class="text-gray-400 text-sm">Testing & Replacement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-16 bg-black">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold">Our Expert Team</h2>
+        <p class="text-red-500 text-2xl mt-1">فريقنا المحترف</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="text-center">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-red-600 mb-4">
+            <img src="https://www.shutterstock.com/image-illustration/silhouette-man-wrench-fixing-machine-260nw-2762763181.jpg" alt="Attique" class="w-full h-full object-cover">
+          </div>
+          <h4 class="font-semibold text-xl">Attique Ur Rehman</h4>
+          <p class="text-red-500">AC Specialist</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-red-600 mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg_zp-zgZ33EKQ5kOPf4HJCJbpDiqosQgeaQ&s" alt="Mohammed" class="w-full h-full object-cover">
+          </div>
+          <h4 class="font-semibold text-xl">Mohammed Nawaz</h4>
+          <p class="text-red-500">Master Electrician</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Workshop Image -->
+  <section id="location" class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-4xl font-bold text-center mb-10">Visit Our Workshop</h2>
+      
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Workshop Front Image -->
+        <div>
+          <p class="text-red-500 text-sm font-medium mb-3">OUR WORKSHOP</p>
+          <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-700 workshop-img">
+            <img 
+              src="exterior.jpeg" 
+              alt="Aden Auto Workshop Front" 
+              class="w-full h-full object-cover min-h-[320px] md:min-h-[450px]">
+          </div>
+          <p class="text-center text-gray-400 text-sm mt-3">Modern Workshop in Manfuhah, Riyadh</p>
+        </div>
+
+        <!-- Google Map -->
+        <div>
+          <p class="text-red-500 text-sm font-medium mb-3">FIND US ON MAP</p>
+          <div class="rounded-3xl overflow-hidden shadow-2xl">
+            <iframe 
+              src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.46149136826796!2d46.733571674134396!3d24.594866420826904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0f47458c830b%3A0x78025eba7d0f63b1!2sHPVM%2BVHH%2C%20Manfuhah%2C%20Riyadh%2012685%2C%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1777383962403!5m2!1sen!2s"
+              width="100%" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 text-center sm:text-left">
+        <div>
+          <p class="text-red-500 text-sm font-medium">ADDRESS</p>
+          <p class="text-lg mt-2">Manfuhah Area, Shop 114<br>Riyadh, Saudi Arabia</p>
+        </div>
+        <div>
+          <p class="text-red-500 text-sm font-medium">WORKING HOURS</p>
+          <p class="text-lg mt-2">
+            Saturday - Thursday: 9:00 AM - 9:00 PM<br>
+            Friday: Closed
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-10 text-center text-gray-500 text-sm">
+    <p>© 2026 Aden Auto Electrician & AC Works</p>
+    <p class="mt-1">ورشة عدن لكهرباء وتكييف السيارات - الرياض</p>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => mobileMenu.classList.add('active'), 10);
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+      });
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href').length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
